@@ -39,7 +39,7 @@ pipeline {
                     npm install 
                     npm install sealights-cypress-plugin
                     export NODE_DEBUG=sl
-                    export CYPRESS_SL_ENABLE_REMOTE_AGENT=true
+                    export CYPRESS_SL_ENABLE_REMOTE_AGENT=false
                     export CYPRESS_SL_TEST_STAGE="Cypress-Test-Stage"
                     export CYPRESS_machine_dns="${params.MACHINE_DNS1}"
                     export CYPRESS_SL_LAB_ID="${params.SL_LABID}"
