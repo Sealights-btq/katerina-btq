@@ -39,6 +39,8 @@ RUN  ./node_modules/.bin/slnodejs config --token ${SEALIGHTS_TOKEN} --appname "p
 #Scan the code
 RUN ./node_modules/.bin/slnodejs scan --token ${SEALIGHTS_TOKEN} --buildsessionidfile buildSessionId --workspacepath "." --scm none --es6Modules
 
+RUN npx slnodejs mocha --token ${SEALIGHTS_TOKEN} --buildsessionidfile buildSessionId --teststage "Unit Tests" --useslnode2 -- --recursive test
+
 FROM base
 
 WORKDIR /usr/src/app
